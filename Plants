@@ -1,0 +1,17 @@
+CREATE TABLE plants (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, P_A TEXT, disease_resistance TEXT); 
+INSERT INTO plants VALUES (1, "tomato", 15, "A", "N");
+INSERT into plants VALUES (2, "hot pepper", 10, "A", "Y");
+INSERT into plants VALUES (3, "corn", 5, "A","Y");
+INSERT into plants VALUES (4, "squAH", 5, "A","Y");
+INSERT into plants VALUES (5, "string beans", 5, "A","Y");
+INSERT into plants VALUES (6, "snap beans", 5, "A","Y");
+INSERT into plants VALUES (7, "dragon tounge beans", 5, "A","Y");
+INSERT into plants VALUES (8, "snap beans", 5, "A","Y");
+INSERT into plants VALUES (9, "watermellon", 5, "A","Y");
+INSERT into plants VALUES (10, "pumkin", 5, "A","Y");
+INSERT into plants VALUES (11, "aspuragus", 4, "p","Y");
+INSERT into plants VALUES (12, "cucumber", 4, "A","Y");
+INSERT into plants VALUES (13, "yellow peppers", 4, "A","Y");
+INSERT into plants VALUES (14, "red peppers", 4, "A","Y");
+INSERT into plants VALUES (15, "sweet peppers", 3, "A","Y");
+SELECT * FROM plants where price ORDER by price 

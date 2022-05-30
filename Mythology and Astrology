@@ -1,0 +1,53 @@
+
+CREATE TABLE Mythology (id INTEGER PRIMARY KEY,
+    name TEXT,
+    God_of TEXT,
+    Region_of_Origin TEXT,
+     God_or_Goddess TEXT,
+     usefulness_of_ability INTEGER);
+
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("zues", "thunder", "greek", "god", 9);
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("Aries ", "war", "rome", "god", 7);
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("freya", "fertility", "norse", "godess", 8);
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("ra", "sun", "Egypt", "god", "9");
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("loki", "tricksters", "norse", "god", 3);
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("artemis", "hunting", "greek", "godess", 7);
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("Nyx", "darkness", "greek", "goddess", 8);
+INSERT INTO Mythology (name, God_of, Region_of_Origin, God_or_Goddess, usefulness_of_ability)
+VALUES ("Kichijoten", "beuaty", "japanese", "goddess", 6);
+
+SELECT * FROM Mythology;
+
+CREATE TABLE Associated_Astology_signs (id INTEGER PRIMARY KEY,
+    first_name TEXT,
+    Astrological_sign TEXT,
+    Month_range TEXT);
+    
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign,Month_range)
+VALUES ( "zeus", "Leo", "july_august");
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign,Month_range)
+VALUES ("Aries ", "Aries ", "march_april");
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign,Month_range)
+VALUES ("freya", "Aries", "march_april");
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign,Month_range)
+VALUES ("ra", "Tarus", "april_may");
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign,Month_range)
+VALUES ("loki", "Gemini", "may_june");
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign,Month_range)
+VALUES ("artemis", "cancer", "june_july"); 
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign, Month_range)
+VALUES ("Nyx", "null", "null"); 
+INSERT INTO Associated_Astology_signs (first_name, Astrological_sign, Month_range)
+VALUES ("Kichijoten", "null", "null");
+
+SELECT * FROM Mythology
+JOIN Associated_Astology_signs
+ON name = first_name
+WHERE usefulness_of_ability <8 AND Region_of_Origin = "greek" 
